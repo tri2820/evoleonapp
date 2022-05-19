@@ -4,8 +4,8 @@ import * as React from 'react';
 
 import DatabaseScreen from '../screens/DatabaseScreen';
 import FileSystemScreen from '../screens/FileSystemScreen';
-import ClientsScreen from '../screens/ClientsScreen';
-import { DrawerParamList, DatabaseParamList, FileSystemParamList, ClientsParamList } from '../types';
+import NewChargerFormScreen from '../screens/NewChargerFormScreen';
+import { DrawerParamList, DatabaseParamList, FileSystemParamList, NewChargerFormParamList } from '../types';
 
 const Drawer = createDrawerNavigator<DrawerParamList>();
 
@@ -14,14 +14,14 @@ export default function DrawerNavigator() {
     <Drawer.Navigator>
       <Drawer.Screen
         name="Database"
-        component={DatabaseNavigator}/>
+        component={DatabaseNavigator} />
       <Drawer.Screen
         name="FileSystem"
         component={FileSystemNavigator}
       />
       <Drawer.Screen
-        name="Clients"
-        component={ClientsNavigator}
+        name="NewChargerForm"
+        component={NewChargerFormNavigator}
       />
     </Drawer.Navigator>
   );
@@ -53,15 +53,15 @@ function FileSystemNavigator() {
   )
 }
 
-const ClientsStack = createStackNavigator<ClientsParamList>();
+const NewChargerFormStack = createStackNavigator<NewChargerFormParamList>();
 
-function ClientsNavigator() {
+function NewChargerFormNavigator() {
   return (
-    <ClientsStack.Navigator>
-      <ClientsStack.Screen
-        name="ClientsScreen"
-        component={ClientsScreen}
+    <NewChargerFormStack.Navigator>
+      <NewChargerFormStack.Screen
+        name="NewChargerFormScreen"
+        component={NewChargerFormScreen}
       />
-    </ClientsStack.Navigator>
+    </NewChargerFormStack.Navigator>
   )
 }

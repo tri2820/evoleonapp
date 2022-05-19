@@ -16,9 +16,9 @@ export default {
               FileSystemScreen: 'filesystem'
             }
           },
-          Clients: {
+          NewChargerFormScreen: {
             screens: {
-              ClientsScreen: 'clients'
+              NewChargerFormScreen: 'newchargerform'
             }
           }
         },
