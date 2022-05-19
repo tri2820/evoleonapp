@@ -16,7 +16,7 @@ export default {
               FileSystemScreen: 'filesystem'
             }
           },
-          NewChargerFormScreen: {
+          NewChargerForm: {
             screens: {
               NewChargerFormScreen: 'newchargerform'
             }
